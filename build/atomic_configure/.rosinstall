@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/trex/catkin_ws/devel/setup.sh

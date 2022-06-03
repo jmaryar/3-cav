@@ -1,0 +1,14 @@
+roslaunch ur_robot_driver ur10e_bringup.launch robot_ip:=10.0.0.22 kinematics_config:=$(rospack find ur_calibration_launch)/etc/ur10e_calibration.yaml
+roslaunch relaxed_ik_ros1 relaxed_ik_rust.launch
+rosparam set /simulation_time go
+rosrun relaxed_ik_ros1 ur_interface.py 
+rosrun relaxed_ik_ros1 keyboard_ikgoal_driver.py
+
+rosrun rosserial_python serial_node.py _port:=/dev/ttyACM0
+
+
+#2.628 seconds average for 0.3 meters = 0.11415 m/s
+
+rospy rate is .2 seconds 
+
+0.11415*0.2 = 0.0228 meters per each .2 segment

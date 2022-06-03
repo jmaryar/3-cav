@@ -1,0 +1,8 @@
+prefix=/home/trex/catkin_ws/install
+
+Name: ur_calibration_launch
+Description: Description of ur_calibration_launch
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
